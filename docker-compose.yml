@@ -1,0 +1,53 @@
+version: '3'
+
+services:
+
+  #nginx
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./:/var/www
+      - ./_docker/nginx/conf.d/:/etc/nginx/conf.d
+    ports:
+      - "8080:80"
+    depends_on:
+      - app
+    container_name: pr_nginx
+
+  #main container
+  app:
+    build:
+      context: .
+      dockerfile: _docker/app/Dockerfile
+    volumes:
+      - ./:/var/www
+    depends_on:
+      - db
+    container_name: pr_app
+
+  #data base
+  db:
+    image: mysql:8.0
+    restart: always
+    volumes:
+      - ./tmp/db:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: san
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+       - "8101:3306"
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
+    container_name: pr_db
+
+  #redis
+#  cache:
+#    image: redis:7
+#    restart: always
+#    volumes:
+#      - ./logs:/log
+#      - ./_docker/redis/conf.d/:/etc/redis/conf.d/
+#    command: redis-server /conf/sentinel.conf --sentinel
+#    network_mode: host
+#    ports:
+#      - "127.0.0.0:26379:26379"
+#    container_name: pr_redis
