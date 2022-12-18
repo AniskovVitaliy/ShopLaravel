@@ -40,14 +40,15 @@ services:
     container_name: pr_db
 
   #redis
-#  cache:
-#    image: redis:7
-#    restart: always
+  cache:
+    image: redis:7
+    restart: always
 #    volumes:
 #      - ./logs:/log
 #      - ./_docker/redis/conf.d/:/etc/redis/conf.d/
-#    command: redis-server /conf/sentinel.conf --sentinel
+    #redis-server /conf/sentinel.conf --sentinel
+#    command: redis-cli
 #    network_mode: host
-#    ports:
-#      - "127.0.0.0:26379:26379"
-#    container_name: pr_redis
+    ports:
+      - "127.0.0.1:6379:6379"
+    container_name: pr_redis

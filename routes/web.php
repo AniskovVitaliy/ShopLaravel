@@ -17,6 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/config', function () {
-    return phpinfo();
-});
+Route::get('/config', 'IndexController@index');
