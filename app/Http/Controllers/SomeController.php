@@ -9,6 +9,7 @@ class SomeController extends Controller
 {
     public function __invoke()
     {
+
         return phpinfo();
     }
 }
