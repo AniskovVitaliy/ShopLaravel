@@ -63,7 +63,7 @@ services:
     # Они будут подключены к файловой системе сервиса
     # Например, все что находится в ./tmp/db мы увидим в директории /var/lib/mysql
     volumes:
-      - ./tmp/db:/var/lib/mysql
+      - /var/lib/mysql/local:/var/lib/mysql
     # Так задаются переменные окружения
     environment:
       MYSQL_DATABASE: san
