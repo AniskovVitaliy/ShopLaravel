@@ -1,35 +1,50 @@
+# Этапы
 stages:
   - build
   - deploy
 
+# Задаем собственные переменные, например REGISTRY
 variables:
   REGISTRY: "registry.gitlab.com/aniskovvitaliy/laravel-shop"
 
+# Сработает перед stages
 before_script:
   - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
 
 app_build:
+  # Этап
   stage: build
+  # отработает runner c тегом build
   tags:
     - build
+  # сработает при пуше на ветку master
   only:
     - master
+  # Скрипты которые нужно отработать на данном этапе
   script:
     - docker build --build-arg NODE_ENV="dev" -t "$REGISTRY/dev/app:$CI_COMMIT_SHA" -f ./_docker/gitlab/app/Dockerfile .
     - docker push "$REGISTRY/dev/app:$CI_COMMIT_SHA"
 
-dev_deploy:
+prod_deploy:
+  # Этап
   stage: deploy
+  # отработает runner c тегом cicd
   tags:
     - cicd
+  # сработает при пуше на ветку master
   only:
     - master
+  # Скрипты которые нужно отработать на данном этапе
   script:
     - export CONTAINER_PREFIX=pr
+    # Останавливает все контейнеры
     - docker stop $(docker ps -a | grep ${CONTAINER_PREFIX}_ | awk '{print $1}') || true
+    # Удаляет все контейнеры
     - docker rm $(docker ps -a | grep ${CONTAINER_PREFIX}_ | awk '{print $1}') || true
+    # Удаляет все volume
     - docker volume rm $(docker volume ls | grep ${CONTAINER_PREFIX}_ | awk '{print $2}') || true
-    - docker-compose -p $CONTAINER_PREFIX -f docker-compose.dev.yml up -d
+    # Запуск docker-compose
+    - docker-compose -p $CONTAINER_PREFIX -f docker-compose.prod.yml up -d
     - docker exec ${CONTAINER_PREFIX}_app composer update
     - docker exec ${CONTAINER_PREFIX}_app composer install
     - docker exec ${CONTAINER_PREFIX}_app php artisan migrate
