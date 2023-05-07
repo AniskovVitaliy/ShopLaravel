@@ -19,9 +19,14 @@ RUN apt-get update && apt-get install -y \
       apt-get clean && \
       rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+#xdebug
+RUN pecl install xdebug \
+    && docker-php-ext-enable xdebug
+
 # Копирует файлы и папки из текущей директории, где находится пользователь в указанную директорию в контейнере
 # COPY считывает позицию пользователя на хосте, поэтому первым аргументом идет «.»
 COPY ./_docker/app/php.ini /usr/local/etc/php/conf.d/php.ini
+COPY ./_docker/app/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 
 # Задает переменные среды внутри образа, на которые могут ссылаться другие инструкции.
 # ENV часто применяется для передачи информации в контейнеризированное приложение через переменные среды.
