@@ -32,7 +32,16 @@ services:
   # (контейнер/сервис) App (может иметь любое имя)
   app:
     # Образ
-    image: _docker/app/Dockerfile
+    #image: _docker/app/Dockerfile
+    # Ключевое слово "build" позволяет задать
+    # путь к файлу Dockerfile, который нужно использовать для создания образа,
+    # который позволит запустить сервис.
+    build:
+      # Контекст для сборки образа,
+      # в данном случае, текущая директория
+      context: .
+      # Имя Docker-файла из которого будет собран образ
+      dockerfile: _docker/app/Dockerfile
     # Так задаются переменные окружения
 #    environment:
 #      - APP_KEY=$APP_KEY
