@@ -21,6 +21,8 @@ class UpdateController extends Controller
         $productTag = ProductTag::find($product->id);
         $productColor = ColorProduct::find($product->id);
 
+        Storage::disk('public')->delete($product->preview_image);
+
         $data['preview_image'] = Storage::disk('public')->put('/images', $data['preview_image']);
 
         $tagsIds = $data['tags'];
