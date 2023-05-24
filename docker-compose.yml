@@ -69,7 +69,6 @@ services:
     # Так задаются переменные окружения
     environment:
       MYSQL_DATABASE: ${DB_DATABASE}
-      MYSQL_USER: ${DB_USERNAME}
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
     # Ключевое слово ports позволяет пробросить порты
     # Перенаправление этого порта на порт компьютера.
