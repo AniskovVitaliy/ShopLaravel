@@ -79,7 +79,7 @@ services:
     # Например, все что находится в ./tmp/db мы увидим в директории /var/lib/mysql
     volumes:
       #  - /var/lib/mysql/prod:/var/lib/mysql
-      - ./tmp/db:/var/lib/mysql
+      - /var/lib/mysql:/var/lib/mysql
     # Так задаются переменные окружения
     environment:
       MYSQL_DATABASE: ${DB_DATABASE}
