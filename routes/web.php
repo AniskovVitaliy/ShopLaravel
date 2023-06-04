@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Route::get('/some', \App\Http\Controllers\SomeController::class);
 
@@ -70,3 +70,7 @@ Route::group(['prefix' => '/admin/products'], function() {
     Route::patch('/{product}', \App\Http\Controllers\Admin\Product\UpdateController::class)->name('admin.product.update');
     Route::delete('/{product}', \App\Http\Controllers\Admin\Product\DeleteController::class)->name('admin.product.delete');
 });
+
+Route::get('/', \App\Http\Controllers\Public\Main\IndexController::class)->name('public.main.index');
+Route::get('/category', \App\Http\Controllers\Public\Category\IndexController::class)->name('public.category.index');
+Route::get('/product', \App\Http\Controllers\Public\Product\IndexController::class)->name('public.product.index');

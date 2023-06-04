@@ -14,11 +14,19 @@ class DeleteController extends Controller
     {
         Storage::disk('public')->delete($product->preview_image);
 
-        $productTag = ProductTag::find($product->id);
-        $productColor = ColorProduct::find($product->id);
+        $productTags = ProductTag::where('product_id', $product->id)->get();
+        $productColors = ColorProduct::where('product_id', $product->id)->get();
 
-        $productTag->delete();
-        $productColor->delete();
+        foreach ($productTags as $tag)
+        {
+            $tag->delete();
+        }
+
+        foreach ($productColors as $color)
+        {
+            $color->delete();
+        }
+
         $product->delete();
 
         return redirect()->route('admin.product.index');
