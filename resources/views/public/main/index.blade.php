@@ -104,90 +104,26 @@
             <div class="line"></div>
             <div class="cards__item _row-between-wrap">
 
-                <a class="card-item _column-start">
+                @foreach($products as $product)
+
+                <a class="card-item _column-start" href="{{route('public.product.index', ['category_' . $product->categories[0]->id, 'product_' . $product->id])}}">
                     <div class="card-item__top-block">
                         <div class="card-item__image-block">
-                            <img src="asset/img/png/1.png" alt="">
+                            <img src="{{ asset('storage/' . $product->preview_image) }}" alt="">
                         </div>
                     </div>
                     <div class="card-item__middle-block _space-auto _text-md">
-                        Название продукта Название продукта Название продукта
+                        {{ $product->title }}
                     </div>
                     <div class="card-item__bottom-block _row-between _item-end">
                         <div class="card-item__button">
                             <div class="button _row-between _item-center _radius">Корзина</div>
                         </div>
-                        <div class="card-item__price _text-md">000.00 руб</div>
+                        <div class="card-item__price _text-md">{{ $product->price }} руб</div>
                     </div>
                 </a>
 
-                <a class="card-item _column-start">
-                    <div class="card-item__top-block">
-                        <div class="card-item__image-block">
-                            <img src="asset/img/png/2.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card-item__middle-block _space-auto _text-md">
-                        Название продукта
-                    </div>
-                    <div class="card-item__bottom-block _row-between _item-end">
-                        <div class="card-item__button">
-                            <div class="button _row-between _item-center _radius">Корзина</div>
-                        </div>
-                        <div class="card-item__price _text-md">000.00 руб</div>
-                    </div>
-                </a>
-
-                <a class="card-item _column-start">
-                    <div class="card-item__top-block">
-                        <div class="card-item__image-block">
-                            <img src="asset/img/png/3.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card-item__middle-block _space-auto _text-md">
-                        Название продукта
-                    </div>
-                    <div class="card-item__bottom-block _row-between _item-end">
-                        <div class="card-item__button">
-                            <div class="button _row-between _item-center _radius">Корзина</div>
-                        </div>
-                        <div class="card-item__price _text-md">000.00 руб</div>
-                    </div>
-                </a>
-
-                <a class="card-item _column-start">
-                    <div class="card-item__top-block">
-                        <div class="card-item__image-block">
-                            <img src="asset/img/png/4.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card-item__middle-block _space-auto _text-md">
-                        Название продукта
-                    </div>
-                    <div class="card-item__bottom-block _row-between _item-end">
-                        <div class="card-item__button">
-                            <div class="button _row-between _item-center _radius">Корзина</div>
-                        </div>
-                        <div class="card-item__price _text-md">000.00 руб</div>
-                    </div>
-                </a>
-
-                <a class="card-item _column-start">
-                    <div class="card-item__top-block">
-                        <div class="card-item__image-block">
-                            <img src="asset/img/png/1.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card-item__middle-block _space-auto _text-md">
-                        Название продукта
-                    </div>
-                    <div class="card-item__bottom-block _row-between _item-end">
-                        <div class="card-item__button">
-                            <div class="button _row-between _item-center _radius">Корзина</div>
-                        </div>
-                        <div class="card-item__price _text-md">000.00 руб</div>
-                    </div>
-                </a>
+                @endforeach
 
             </div>
         </div>
@@ -199,90 +135,20 @@
             <div class="line"></div>
             <div class="cards__item _row-between-wrap">
 
-                <a class="card-item _column-start">
+                @foreach($categories as $category)
+
+                <a class="card-item _column-start" href="{{route('public.category.index', 'category_' . $category->id)}}">
                     <div class="card-item__top-block">
                         <div class="card-item__image-block">
                             <img src="asset/img/png/1.png" alt="">
                         </div>
                     </div>
                     <div class="card-item__middle-block _space-auto _text-md">
-                        Название продукта Название продукта Название продукта
-                    </div>
-                    <div class="card-item__bottom-block _row-between _item-end">
-                        <div class="card-item__button">
-                            <div class="button _row-between _item-center _radius">Корзина</div>
-                        </div>
-                        <div class="card-item__price _text-md">000.00 руб</div>
+                        {{ $category->title }}
                     </div>
                 </a>
 
-                <a class="card-item _column-start">
-                    <div class="card-item__top-block">
-                        <div class="card-item__image-block">
-                            <img src="asset/img/png/2.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card-item__middle-block _space-auto _text-md">
-                        Название продукта
-                    </div>
-                    <div class="card-item__bottom-block _row-between _item-end">
-                        <div class="card-item__button">
-                            <div class="button _row-between _item-center _radius">Корзина</div>
-                        </div>
-                        <div class="card-item__price _text-md">000.00 руб</div>
-                    </div>
-                </a>
-
-                <a class="card-item _column-start">
-                    <div class="card-item__top-block">
-                        <div class="card-item__image-block">
-                            <img src="asset/img/png/3.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card-item__middle-block _space-auto _text-md">
-                        Название продукта
-                    </div>
-                    <div class="card-item__bottom-block _row-between _item-end">
-                        <div class="card-item__button">
-                            <div class="button _row-between _item-center _radius">Корзина</div>
-                        </div>
-                        <div class="card-item__price _text-md">000.00 руб</div>
-                    </div>
-                </a>
-
-                <a class="card-item _column-start">
-                    <div class="card-item__top-block">
-                        <div class="card-item__image-block">
-                            <img src="asset/img/png/4.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card-item__middle-block _space-auto _text-md">
-                        Название продукта
-                    </div>
-                    <div class="card-item__bottom-block _row-between _item-end">
-                        <div class="card-item__button">
-                            <div class="button _row-between _item-center _radius">Корзина</div>
-                        </div>
-                        <div class="card-item__price _text-md">000.00 руб</div>
-                    </div>
-                </a>
-
-                <a class="card-item _column-start">
-                    <div class="card-item__top-block">
-                        <div class="card-item__image-block">
-                            <img src="asset/img/png/1.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card-item__middle-block _space-auto _text-md">
-                        Название продукта
-                    </div>
-                    <div class="card-item__bottom-block _row-between _item-end">
-                        <div class="card-item__button">
-                            <div class="button _row-between _item-center _radius">Корзина</div>
-                        </div>
-                        <div class="card-item__price _text-md">000.00 руб</div>
-                    </div>
-                </a>
+                @endforeach
 
             </div>
         </div>

@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::get('/some', \App\Http\Controllers\SomeController::class);
+Route::get('/info', \App\Http\Controllers\InfoController::class);
 
 Route::get('/admin', \App\Http\Controllers\Admin\Main\IndexController::class)->name('admin.main.index');
 
@@ -72,5 +73,7 @@ Route::group(['prefix' => '/admin/products'], function() {
 });
 
 Route::get('/', \App\Http\Controllers\Public\Main\IndexController::class)->name('public.main.index');
-Route::get('/category', \App\Http\Controllers\Public\Category\IndexController::class)->name('public.category.index');
-Route::get('/product', \App\Http\Controllers\Public\Product\IndexController::class)->name('public.product.index');
+Route::get('/{category_path}', \App\Http\Controllers\Public\Category\IndexController::class)->name('public.category.index');
+Route::get('/{category_path}/{product_path}', \App\Http\Controllers\Public\Product\IndexController::class)->name('public.product.index');
+
+

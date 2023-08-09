@@ -32,98 +32,98 @@
         <!-- ./BREADCRUMBS -->
 
         <!-- CATEGORIES CARDS -->
-        <div class="cards">
-            <div class="cards__title _text-lg">Категории</div>
-            <div class="line"></div>
-            <div class="cards__item _row-between-wrap">
+{{--        <div class="cards">--}}
+{{--            <div class="cards__title _text-lg">Категории</div>--}}
+{{--            <div class="line"></div>--}}
+{{--            <div class="cards__item _row-between-wrap">--}}
 
-                <a class="card-item _column-start">
-                    <div class="card-item__top-block">
-                        <div class="card-item__image-block">
-                            <img src="asset/img/png/1.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card-item__middle-block _space-auto _text-md">
-                        Название продукта Название продукта Название продукта
-                    </div>
-                    <div class="card-item__bottom-block _row-between _item-end">
-                        <div class="card-item__button">
-                            <div class="button _row-between _item-center _radius">Корзина</div>
-                        </div>
-                        <div class="card-item__price _text-md">000.00 руб</div>
-                    </div>
-                </a>
+{{--                <a class="card-item _column-start">--}}
+{{--                    <div class="card-item__top-block">--}}
+{{--                        <div class="card-item__image-block">--}}
+{{--                            <img src="asset/img/png/1.png" alt="">--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="card-item__middle-block _space-auto _text-md">--}}
+{{--                        Название продукта Название продукта Название продукта--}}
+{{--                    </div>--}}
+{{--                    <div class="card-item__bottom-block _row-between _item-end">--}}
+{{--                        <div class="card-item__button">--}}
+{{--                            <div class="button _row-between _item-center _radius">Корзина</div>--}}
+{{--                        </div>--}}
+{{--                        <div class="card-item__price _text-md">000.00 руб</div>--}}
+{{--                    </div>--}}
+{{--                </a>--}}
 
-                <a class="card-item _column-start">
-                    <div class="card-item__top-block">
-                        <div class="card-item__image-block">
-                            <img src="asset/img/png/2.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card-item__middle-block _space-auto _text-md">
-                        Название продукта
-                    </div>
-                    <div class="card-item__bottom-block _row-between _item-end">
-                        <div class="card-item__button">
-                            <div class="button _row-between _item-center _radius">Корзина</div>
-                        </div>
-                        <div class="card-item__price _text-md">000.00 руб</div>
-                    </div>
-                </a>
+{{--                <a class="card-item _column-start">--}}
+{{--                    <div class="card-item__top-block">--}}
+{{--                        <div class="card-item__image-block">--}}
+{{--                            <img src="asset/img/png/2.png" alt="">--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="card-item__middle-block _space-auto _text-md">--}}
+{{--                        Название продукта--}}
+{{--                    </div>--}}
+{{--                    <div class="card-item__bottom-block _row-between _item-end">--}}
+{{--                        <div class="card-item__button">--}}
+{{--                            <div class="button _row-between _item-center _radius">Корзина</div>--}}
+{{--                        </div>--}}
+{{--                        <div class="card-item__price _text-md">000.00 руб</div>--}}
+{{--                    </div>--}}
+{{--                </a>--}}
 
-                <a class="card-item _column-start">
-                    <div class="card-item__top-block">
-                        <div class="card-item__image-block">
-                            <img src="asset/img/png/3.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card-item__middle-block _space-auto _text-md">
-                        Название продукта
-                    </div>
-                    <div class="card-item__bottom-block _row-between _item-end">
-                        <div class="card-item__button">
-                            <div class="button _row-between _item-center _radius">Корзина</div>
-                        </div>
-                        <div class="card-item__price _text-md">000.00 руб</div>
-                    </div>
-                </a>
+{{--                <a class="card-item _column-start">--}}
+{{--                    <div class="card-item__top-block">--}}
+{{--                        <div class="card-item__image-block">--}}
+{{--                            <img src="asset/img/png/3.png" alt="">--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="card-item__middle-block _space-auto _text-md">--}}
+{{--                        Название продукта--}}
+{{--                    </div>--}}
+{{--                    <div class="card-item__bottom-block _row-between _item-end">--}}
+{{--                        <div class="card-item__button">--}}
+{{--                            <div class="button _row-between _item-center _radius">Корзина</div>--}}
+{{--                        </div>--}}
+{{--                        <div class="card-item__price _text-md">000.00 руб</div>--}}
+{{--                    </div>--}}
+{{--                </a>--}}
 
-                <a class="card-item _column-start">
-                    <div class="card-item__top-block">
-                        <div class="card-item__image-block">
-                            <img src="asset/img/png/4.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card-item__middle-block _space-auto _text-md">
-                        Название продукта
-                    </div>
-                    <div class="card-item__bottom-block _row-between _item-end">
-                        <div class="card-item__button">
-                            <div class="button _row-between _item-center _radius">Корзина</div>
-                        </div>
-                        <div class="card-item__price _text-md">000.00 руб</div>
-                    </div>
-                </a>
+{{--                <a class="card-item _column-start">--}}
+{{--                    <div class="card-item__top-block">--}}
+{{--                        <div class="card-item__image-block">--}}
+{{--                            <img src="asset/img/png/4.png" alt="">--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="card-item__middle-block _space-auto _text-md">--}}
+{{--                        Название продукта--}}
+{{--                    </div>--}}
+{{--                    <div class="card-item__bottom-block _row-between _item-end">--}}
+{{--                        <div class="card-item__button">--}}
+{{--                            <div class="button _row-between _item-center _radius">Корзина</div>--}}
+{{--                        </div>--}}
+{{--                        <div class="card-item__price _text-md">000.00 руб</div>--}}
+{{--                    </div>--}}
+{{--                </a>--}}
 
-                <a class="card-item _column-start">
-                    <div class="card-item__top-block">
-                        <div class="card-item__image-block">
-                            <img src="asset/img/png/1.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card-item__middle-block _space-auto _text-md">
-                        Название продукта
-                    </div>
-                    <div class="card-item__bottom-block _row-between _item-end">
-                        <div class="card-item__button">
-                            <div class="button _row-between _item-center _radius">Корзина</div>
-                        </div>
-                        <div class="card-item__price _text-md">000.00 руб</div>
-                    </div>
-                </a>
+{{--                <a class="card-item _column-start">--}}
+{{--                    <div class="card-item__top-block">--}}
+{{--                        <div class="card-item__image-block">--}}
+{{--                            <img src="asset/img/png/1.png" alt="">--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="card-item__middle-block _space-auto _text-md">--}}
+{{--                        Название продукта--}}
+{{--                    </div>--}}
+{{--                    <div class="card-item__bottom-block _row-between _item-end">--}}
+{{--                        <div class="card-item__button">--}}
+{{--                            <div class="button _row-between _item-center _radius">Корзина</div>--}}
+{{--                        </div>--}}
+{{--                        <div class="card-item__price _text-md">000.00 руб</div>--}}
+{{--                    </div>--}}
+{{--                </a>--}}
 
-            </div>
-        </div>
+{{--            </div>--}}
+{{--        </div>--}}
         <!-- ./CATEGORIES CARDS -->
 
         <!-- PRODUCT CARDS -->
