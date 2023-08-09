@@ -9,6 +9,7 @@ class InfoController extends Controller
 {
     public function __invoke(): string
     {
+        $q = 1;
         return phpinfo();
     }
 }
